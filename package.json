@@ -1,0 +1,18 @@
+{
+  "name": "firebase_talk",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn build && firebase serve",
+    "login": "firebase login",
+    "deploy": "yarn build && firebase deploy",
+    "build": "yarn build:frontend && yarn build:backend",
+    "build:frontend": "yarn --cwd \"frontend\" build",
+    "build:backend": "yarn --cwd \"functions\" build"
+  },
+  "devDependencies": {
+    "firebase-tools": "^5.1.1"
+  },
+  "dependencies": {}
+}
